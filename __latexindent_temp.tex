@@ -1,0 +1,460 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{lmodern}
+\usepackage{xeCJK}
+\usepackage{amsmath}
+\title{Geometry Algebra Pen Notes}
+\author{Kion Conio}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{The Algebra of vectors}
+
+\subsection{Vectors and its Algebraic Operations }
+
+\subsubsection{Vectors }
+\paragraph{Definition}
+A quantity with both magnitude and direction is called a vector. e.g. Force, velocity, acceleration, displacement, etc.
+
+\paragraph{Notation}
+Directed line segment: $\rightarrow $. We could draw a graph to make our proof.
+
+
+\begin{itemize}
+
+\item A directed line segment has a Initial point and a Terminal point.  
+
+\item $\overrightarrow{AB}$. An arrow upper the letters. 
+
+\item $\bm \alpha$: bold and lower case Roman letter.  
+
+\item Sometimes, $\vec a,\underline u$ 
+
+\item Magnitude, size, length: $|\bm \alpha|,|\overrightarrow {AB}|$
+
+
+\end{itemize}
+
+\paragraph{Relevent Concepts} 
+
+Two vectors are equal if and only if their magnitude and direction are the same. No matter where they start.
+
+The vector with zero magnitude is called the \textbf{zero vector}, denoted by $\bm 0$. $\bm 0$ is the only vector is the only vector with specific direction.We have: 
+$$
+    \overrightarrow {AB}=\vec 0 \iff A=B
+$$
+  
+A vector with magnitude $1$ is called \textbf{ unit vector}.
+  
+A vector having the same length, but opposite direction of $\vec a$, is called the negative of $\vec a$, denoted by $-\vec a$. $-\vec a$. Its a whole notation, not an operation. Thus 
+
+ $$\overrightarrow  {AB}= - \overrightarrow  {BA}$$
+
+\subsubsection{Operations}
+
+\paragraph{Addition of vectors}
+
+The sum of two vectors $\vec a$ and $\vec{b}$ written as
+
+$$
+\vec a +\vec b = \vec c
+$$
+$\vec c $ is a vector.
+
+
+Defined by \textbf{triangle method}, that is
+    $$
+    \overrightarrow  {AB}+\overrightarrow  {BC}=\overrightarrow  {AC}
+    $$
+
+Defined by \textbf{parallelogram  method} ...
+
+\paragraph{Proposition of Vectors}
+
+
+For vectors $\vec a$ , $\vec b$ , and $\vec c$, the addition satisfies:
+
+\begin{itemize}
+
+\item $\vec a+\vec b =\vec b+\vec a $ , commutative law, 
+
+\item $(\vec a+\vec b)+\vec c= \vec a+(\vec b+\vec c) $, association law.
+
+\item $\vec a+\vec 0=\vec a$
+
+\item $\vec a+(-\vec a)=\vec 0$
+
+\item Vectors with addition is a abel group. 
+
+\end{itemize}
+
+First two we draw a graph to prove it. Then we prove the rest ones.
+
+3. Set $\vec a= \overrightarrow  {AB}$ and  $\vec 0 = \overrightarrow  {BB}$. Then $\vec a +\vec 0 = \overrightarrow  {AB} +\overrightarrow  {BB}=\overrightarrow {AB}= \vec a$
+
+4. Set $\vec a=\overrightarrow {AB}$. Then $ -\vec a = \vec {BA}$. Thus, $\vec a+(-\vec a)=\vec{AB}+\vec{BA}=\vec 0 $
+
+\paragraph{Definition} We can define the difference of two vectors $\vec a$ and $\vec b$ to be $\vec a-\vec b= \vec a +(-\vec b)$ 
+
+\paragraph{Triangular Inequality}
+
+
+
+For any vectors $\vec a$ and $\vec b$, we have 
+  $$
+  |\vec a +\vec b|\leq |\vec a|+|\vec b|
+  $$
+
+\subsection{Scalar multiplication}
+
+\paragraph{Definition} 
+The product of vector $\vec a$ and a scalar $\lambda$, wirtten as $\lambda \vec a$, is a vector, defined by 
+$$
+|\lambda \vec a|= |\lambda||\vec a|
+ $$
+  
+\paragraph{Direction}
+
+\begin{itemize}
+
+\item $\lambda >0$, $\lambda \vec a$ has the same direction as $\vec a$
+\item $\lambda <0$, $\lambda \vec a$ has the opposite direction as $\vec a$
+  
+ \end{itemize}
+\paragraph{Proposition}
+
+\begin{itemize}
+\item $\lambda \vec a =\vec 0 \iff \lambda = 0 \quad or \quad  \vec  a = \vec 0 $
+\item $1 \ \vec a=\vec a,\quad (-1)\vec a = - \vec  a$
+\item $\lambda（\mu \vec a ) = (\lambda \mu )\vec  a$
+\item $(\lambda + \mu )\vec  a = \lambda \vec a  + \mu \vec a$ distributive law 
+\item $\lambda (\vec  a + \vec  b)= \lambda \vec a + \lambda \vec  b$ distributive law 
+\end{itemize}
+
+\paragraph{Proof}
+
+\begin{itemize}
+
+
+
+ \item $\lambda \vec a  = \vec  0  \iff |\lambda \vec a | = |\vec 0 | =0 \iff |\lambda||\vec  a|=0 \iff |\lambda |=0 \quad or \quad |\vec a|=0\iff \lambda =0 \quad \vec  a = \vec 0 $.
+
+ \item  ...
+
+  \item $|\lambda (\mu \vec a )|= |\lambda ||\mu \vec  a |\\= |\lambda||\mu||\vec  a |\\= (|\lambda ||\mu|)|\vec a|\\= |(\lambda \mu)\vec a|$
+
+        That is, $\lambda (\mu \vec  a )$ and $(\lambda \mu )\vec a$ has the same \textbf{length}.
+
+        Then we consider the \textbf{direction}.
+
+        ​	Case 1. $\lambda \mu=0$, $ \vec 0 =(\lambda \mu )\vec  a= \lambda (\mu \vec a )$
+
+        ​	Case 2. $\lambda \mu >0$, Trivially, $\lambda (\mu \vec  a )$has the same direction as $\vec  a $;
+
+        ​												$(\lambda \mu) \vec  a$has the same direction as $\vec  a$;											
+
+        ​	Case 3. $\lambda \mu <0$, Trivially, $\lambda (\mu \vec  a )$has the opposite direction of $\vec  a $;
+
+        ​												$(\lambda \mu) \vec  a$has the opposite direction of $\vec  a $;			
+
+        ​	Thus, we can see that $\lambda (\mu \vec  a )$ has the same direction as $(\lambda \mu) \vec  a $.
+
+        ​	Hence, 
+        $$
+        (- \lambda )\vec a  =  (-1)\lambda \vec a  = (-1)(\lambda \vec a)= -\lambda \vec a 
+        $$
+
+- If $\lambda =0 \quad or\quad  \mu =0 \quad or \quad \vec a =\vec 0 $, it is easily to see that $(\lambda + \mu )\vec  a = \lambda \vec a  + \mu \vec a$.
+
+    consider $\lambda \neq 0 \quad or\quad  \mu \neq 0 \quad or \quad \vec a \neq \vec 0 $.
+
+    ​	$1^{\circ}$  assume that $\lambda >0 , \mu >0 $ then,
+    $$
+      |(\lambda + \mu)\vec a |= |\lambda +\mu ||\vec a | 
+      $$
+      
+      $$
+      = (\lambda +\mu )|\vec a | 
+      $$
+      
+      $$
+      = \lambda |\vec a |+\mu |\vec a | 
+      $$
+      
+      $$
+      = |\lambda||\vec a| + |\mu | |\vec  a |
+      $$
+      
+      $$
+      = |\lambda \vec a | + |\mu \vec a |\quad (for \quad  \vec a \parallel \vec a) 
+      $$
+      
+      $$
+      = |\lambda \vec a +\mu \vec a |
+    $$
+      ​	
+
+    ​	$2^{\circ}$  If one of  $\lambda ,\mu $ is negative, we can put the terms containing the negative scalars to the other side of the equation.
+
+    ​	For example: 
+
+    ​	$\lambda >0 , \mu <0,\lambda +\mu <0 $ 
+    $$
+      (\lambda +\mu )\vec a = \lambda \vec a +\mu \vec a \iff -\mu \vec a  = \lambda \vec a +[-(\lambda +\mu )\vec a ]
+    $$
+
+    $$
+      \iff \lambda \vec  a +(-(\lambda + \mu ))\vec a  = (-\mu) \vec a
+    $$
+
+    
+
+    ​	(which back to the case of $\lambda >0 , \mu >0 ,\lambda + \mu >0$)
+
+    
+
+\item Case 1: $\lambda = 0$,or $\vec a = \vec 0$, or $\vec b= \vec 0 $
+
+    Case 2:$\lambda \neq 0$,or $\vec a \neq \vec 0$, or $\vec b\neq \vec 0 $
+
+    $\lambda( \vec  a + \vec  b) = \lambda \vec a +\lambda \vec b $(Graph...(similarity of triangle))
+
+
+\end{itemize}
+
+\subsection{Collinear and Coplanar Vectors}
+
+\paragraph{Definition}
+
+ When we move some vectors to the same initial point, if they are on the same line or plane, then we say these vectors are \textbf{collinear }or \textbf{coplanar}. 
+
+Trivially,
+
+\begin{itemize}
+
+\item $\vec 0 $ Is collinear with any vector. 
+\item Collinear vectors must be coplanar.
+\item Any two vectors must be coplanar.
+
+\end{itemize}
+
+
+\subsubsection{ Collinear Vectors}
+
+
+\paragraph{Notation}
+
+ two vectors are collinear $\iff$ their directions are the same or opposite. We write $\vec a \parallel \vec b $
+
+\paragraph{Proposition} 
+
+For vectors $\vec a $ and $ \vec  b$ , if there exists a scalar $\lambda$ $s.t.$  $\vec b = \lambda \vec a $, then $\vec a , \vec b $ are collinear.
+
+\paragraph{Theorem}
+
+(Existence): Assume that $\vec a \neq \vec 0$. If $\vec a, \vec b  $ collinear, then there exists scalar $\lambda \quad s.t. \quad  \vec b = \lambda \vec a $.
+
+\paragraph{Proof}
+
+ If $\vec b = \vec 0 $, then $\lambda =0$
+
+Consider $\vec b \neq \vec 0 $, then 
+
+$$
+\vec{b}=|\vec{b}| \frac{\vec{b}}{|\vec{b}|}=\left\{\begin{array}{ll}
+\frac{\vec{b}}{|\vec{a}|}, & \vec{a} \text { and } \vec{b} \text { have the same direction } \\
+\frac{-|\vec{b}|}{|\vec{a}|}, & \vec{a} \text { and } \vec{b} \text { have the opposite direction }
+\end{array}\right.
+$$
+
+
+(Uniqueness): Assume that $\vec b = \lambda ' \vec a $ Then 
+    
+$$
+     	(\lambda -\lambda ' )\vec a  = \vec 0 \\
+  	     For \quad \vec a \neq \vec 0 \\
+      	 \Rightarrow  \quad \lambda = \lambda '
+$$
+
+\subsubsection{Three coplanar Vectors}
+
+\paragraph{Proposition}
+For vectors $\vec a, \vec b ,\vec c $ if there exists scalar $\lambda , \mu $, such that $\vec c = \lambda \vec a +\mu \vec b $, then $\vec a, \vec b, \vec c$ are coplanar. (Graph...)
+ 
+\paragraph{Proof}
+
+If $\vec a  = \vec 0$, then $\vec c = \lambda \vec  b$, so vectors $\vec  b \parallel \vec  c$, then $\vec  a, \vec  b, \vec  c $ are Coplanar;
+
+If $\vec  a \neq \vec  0 $, then consider two cases:
+
+Case 1: $\vec  a \parallel \vec  b$. Thus, there exist $k$ s.t. $\vec  b = k \vec  a $. 
+
+Hence, $\vec  c = \lambda \vec  a + \mu \vec  b = \lambda \vec  a +\mu k \vec  a  = (\lambda + \mu k ) \vec  a $ .
+
+Therefore, $\vec c \parallel \vec  a$. 
+
+Case 2: $\vec  a \not \parallel \vec  b$, then $\vec  c$ is the diagrod of the parallelogram formed by $\lambda \vec  a, \mu \vec  b$
+
+\paragraph{Theorem}
+
+Assume that $\vec a, \vec b $ are \textbf{not collinear}, then for any vector $\vec c $  on the plane determined by $\vec a$ and $\vec b $ , there exist \textbf{unique} scalars $\lambda , \mu \quad s.t. \quad $
+
+
+  $$
+  \vec c = \lambda \vec a + \mu \vec b
+  $$
+  
+ \paragraph{Proof}
+ 
+ $1^{\circ}$We first prove the existence of $\lambda, \mu $. 
+
+(Graph...)
+
+We can wrote $\vec c = \vec  c_1+ \vec  c_2, \vec c_1 \parallel \vec a, \vec c_2 \parallel \vec  b$, 
+
+Since $\vec a,\vec  b \neq \vec  0$, 
+
+$\exists \lambda,\mu,\quad \vec c_1 = \lambda \vec a, \vec c_2 = \mu \vec b$
+
+Then, $\vec c = \lambda \vec  a+\mu \vec  b$
+
+$2^{\circ}$Suppose that $\vec c = \lambda ' \vec  a+\mu '\vec  b $
+
+We see that $(\lambda - \lambda ')\vec  a +(\mu - \mu ')\vec b  = \vec  0$
+
+If $\lambda \neq \lambda '$, then 
+$$
+\vec a  = - \frac {\mu - \mu '}{\lambda - \lambda  ' }\vec b
+$$
+then $\vec a \parallel \vec b$, which is a contradiction.
+
+thus, $\lambda = \lambda '$, we have $(\mu - \mu ')\vec b = \vec 0$
+
+Since $\vec b \neq \vec 0 , \mu = \mu '$
+
+
+\subsubsection{Three Non-coplanar Vectors}
+
+
+
+
+\paragraph{Theorem} If $\vec a, \vec b , \vec c$ are not coplaner, then or any vector $\vec u$, there exist unique scalars $\lambda,\mu,\nu$,s.t.
+  $$
+  \vec u =\lambda \vec a+ \mu \vec b + \nu \vec c
+  $$
+\paragraph{Proof} 
+$1^{\circ}$Existence of $\lambda,\mu ,\nu $
+
+  ​			(Graph...)
+
+  ​			$2^{\circ}$Assume that 
+  $$
+  \vec u = (\lambda  - \lambda^*)\vec a + (\mu - \mu^*)\vec b + (\nu - \nu^*)\vec c
+  $$
+  ​				Suppose $\lambda \neq \lambda^*$ , then 
+  $$
+  \vec a  = - \frac{\mu - \mu^*}{\lambda- \lambda^*}\vec b - \frac {\nu - \nu^*}{\lambda - \lambda^*}\vec c
+  $$
+  ​				Showing that $\vec a,\vec b \vec c $. are coplaner. This is a contradiction. 
+
+  ​				Hence, $\lambda = \lambda ^*$,We have 
+  $$
+  (\mu - \mu ^*)\vec b + (\nu - \nu ^*)\vec c = \vec 0 
+  $$
+  ​				Using the similar argument in the proof of the last theorem, we know that  $\mu = \mu ^*,\nu = \nu ^*\quad (\vec b \not \parallel \vec c)$
+
+  
+
+\subsubsection{Three Points on the same line}
+
+  Point $C$ is on the line segment  $AB$ if and only if there exist scalar $\lambda ,\mu \geq 0 \quad (\lambda + \mu = 1)$ s.t. 
+$$
+  \overrightarrow{OC} = \lambda \overrightarrow{OA} + \mu \overrightarrow{OB}
+$$
+   for any point $O$.
+
+  
+\paragraph{Proof}
+
+  Point $C$ is on $AB\iff\overrightarrow{AC}\parallel \overrightarrow{AB}$.
+ 
+$$
+  \iff |\overrightarrow{AC}|\leq |\overrightarrow{AB}| 
+ $$
+ 
+ $$
+  \iff \exists \mu \in [0,1]  \quad s.t. \quad  \overrightarrow{AC}= \mu \overrightarrow{AB} \\
+  $$
+  $$
+  \iff \overrightarrow {OC}-\overrightarrow {OA} = \mu (\overrightarrow{OB}- \overrightarrow{OA}) \\
+  $$
+  $$
+  \iff \overrightarrow{OC} = (1-\mu)\overrightarrow{OA}+\mu \overrightarrow{OB}\\
+  $$
+  $$
+  \iff \overrightarrow{OC} = \lambda \overrightarrow{OA}+ \mu \overrightarrow{OB},\quad (\lambda + \mu  = 1)
+$$
+
+  
+
+
+\subsection{Affine Coordinate System}
+
+\subsubsection{ Coordinate System }
+
+  By a theorem of \textbf{1-2}, if $\vec e_1,\vec e_2,\vec e_3$ are not coplanar, then for any vector $\vec a$, there exist unique scalar $a_1,a_2,a_3$ s.t.
+$$
+  \vec a  = a_1 \vec e_1+ a_2 \vec e_2 + a_3\vec e_3
+$$
+  The ordered tripe$(a_1,a_2,a_3)$ is called the coordinate of $\vec a $.
+
+  It can be show that the mapping $\vec a \mapsto   (a_1,a_2,a_3)$ is a one-to-one  correspondence.
+
+  We simply write $\vec a  = (a_1,a_2,a_3)$ 
+
+  Obviously, $\vec e_1 = (1,0,0),\quad \vec e_2 = (0,1,0), \quad \vec e_3 = (0,0,1)$
+
+  Origin + Basis = Coordinate System
+$$
+[O,\vec e_1,\vec e_2,\vec e_3]
+$$
+If $\vec e_1 \bot \vec e_2, \vec e_2 \bot \vec e_3, \vec e_1 \bot \vec e_3$ and $\vec e_1,\vec e_2, \vec e_3$ are unit vectors, then $[O,\vec e_1,\vec e_2,\vec e_3]$ is called the Cartesian coordinate system.
+
+\subsubsection{ Algebraic Operations Using Coordinate }
+
+\paragraph{ Theorem}  In an affine coordinate system$[O,\vec e_1,\vec e_2,\vec e_3]$, assume that $\vec a = (a_1,a_2,a_3)$ and $\vec b = (b_1,b_2,b_3)$, then,
+
+$$\vec a +\vec b = (a_1+b_1,a_2+b_2,a_3+b_3)$$
+
+\paragraph{ Proof}
+  $$
+  \vec a + \vec b  
+  $$
+  $$
+  \\ = (a_1\vec e_1 + a_2 \vec e_2 + a_3\vec e_3 )+ (b_1\vec e_1 + b_e \vec b_2 + b_3\vec e_3 ) 
+  $$
+  $$
+  \\ = (a_1+b_1)\vec e_1 + (a_2+b_2) \vec e_2 + (a_3+b_3) \vec e_3
+  $$
+  
+- $k \vec a  = (ka_1,ka_2,ka_3)$
+
+\paragraph{ Proof}
+  $$
+  k \vec a 
+  \\ = k(a_1\vec e_1 + a_e \vec e_2 + a_3\vec e_3 )
+  \\ = ka_1\vec e_1 + k a_2 \vec e_2 + k a_3\vec e_3
+  $$
+  
+
+Corollary Coordinary of $\overrightarrow {AB}$ = Coordinate of $B$  - Coordinate $A$
+$$
+\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow {OA}
+$$
+
+
+
+
+\end{document}
