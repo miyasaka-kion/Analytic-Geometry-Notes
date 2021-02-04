@@ -1,14 +1,6 @@
----
-author:
-- Kion Conio
-title: Geometry Algebra Pen Notes
----
+# The Algebra of vectors
 
-The Algebra of vectors
-======================
-
-Vectors and its Algebraic Operations 
-------------------------------------
+## Vectors and its Algebraic Operations 
 
 ### Vectors
 
