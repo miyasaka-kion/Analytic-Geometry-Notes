@@ -566,8 +566,232 @@ $$
   a_{2,1} & a_{2,2} & a_{2,3} \\
   a_{3,1} & a_{3,2} & a_{3,3}
   \end{array} 
-  =a_{1,1} a_{2,2} a_{3,3}+a_{1,2} a_{2,3} a_{3,1}+a_{1,3} a_{2,1} a_{3,2}-a_{1,3} a_{2,2} a_{3,1}-a_{1,1} a_{2,3} a_{3,2}-a_{1,2} a_{2,1} a_{3,3}
+  =a_{1,1} a_{2,2} a_{3,3}+a_{1,2} a_{2,3} a_{3,1}+a_{1,3} a_{2,1} a_{3,2}-a_{1,3} a_{2,2} a_{3,1}-a_{1,1} a_{2,3} a_{3,2}-a_{1,2} a_{2,1} a_{3,3}\\
+  =...
+$$
+...(missed a class)\dots
+
+\section{Planes and straight Lines}
+\subsection{Equation and its Graphs}
+\paragraph{Example}
+In the Cartesian c.s.
+\begin{itemize} 
+  \item Sphere centered at $(a,b,c)$ with radius $r$: $(x-a)^2+(y-b)^2+(z-c)^2=r^2$.
+  \item Unit circle centered at the origin on the $xy$ plane: $x^2+y^2=1,z=0$.
+\end{itemize}
+Graph - Point/coordinate - equation
+In general,
+\begin{itemize}
+  \item Surface $F(x,y,z)=0$.
+  \item Curve 
+  $\left\{\begin{array}{l}
+    F(x, y, z)=0 \\
+    G(x, y, z)=0
+    \end{array}\right.$
+  \item Parametric equation 
+    $\left\{\begin{array}{l}
+    x=f(t) \\
+    y=g(t) \\
+    z=h(t)
+    \end{array}\right.
+  $\\
+  circle on the $xy$ plane center at the origin
+  $\left\{\begin{array}{l}
+    x=a\cos \theta \\
+    y=a \sin \theta\\
+    z=0
+    \end{array}\right.
+  $\\
+  Helix
+  $\left\{\begin{array}{l}
+    x=a\cos \theta \\
+    y=a \sin \theta\\
+    z=\theta
+    \end{array}\right.
+  $\\
+\end{itemize}
+\subsection{Planes in an Affine Coordinate System}
+\subsubsection{Equation of a Plane}
+In an affine coordinate system, assume that plane $\pi$ passes
+through point $M_0(x_0,y_0,z_0)$, and is paralleled to two vectors 
+$\vec u_1=(X_1,Y_1,Z_1)$ and $\vec u_2=(X_2,Y_2,Z_2)$. Point $M(x,y,z)$
+is on the plane $\pi$.
+$$
+\iff \overrightarrow{M_0M},\vec a,\vec b \quad \text{are coplanar}
+$$
+$$
+\iff
+\left|\begin{array}{ccc}
+  x-x_{0} & y-y_{0} & z-z_{0} \\
+  X_{1} & Y_{1} & Z_{1} \\
+  X_{2} & Y_{2} & Z_{2}
+  \end{array}\right|=0
+$$
+$$
+\Rightarrow Ax+By+Cz+D=0
+$$
+where
+$$
+\begin{aligned}
+  A=\left|\begin{array}{ll}
+  Y_{1} & Z_{1} \\
+  Y_{2} & Z_{2}
+  \end{array}\right|, & B=\left|\begin{array}{ll}
+  Z_{1} & X_{1} \\
+  Z_{2} & X_{2}
+  \end{array}\right|, \quad C=\left|\begin{array}{ll}
+  X_{1} & Y_{1} \\
+  X_{2} & Y_{2}
+  \end{array}\right| \\
+  D &=-\left|\begin{array}{lll}
+  x_{0} & y_{0} & z_{0} \\
+  X_{1} & Y_{1} & Z_{1} \\
+  X_{2} & Y_{2} & Z_{2}
+  \end{array}\right|
+  \end{aligned}
+$$
+\paragraph{Conclusion}Now We have shown that every plane in an affine coordinate system 
+has the equation in the form of
+$$
+Ax+By+Cz+D=0.
+$$
+Since $\vec a \times \vec b \neq \vec 0$,
+$A,B,C$ are not all $0$s.
+
+
+On the other hand, consider $kx+my+nz+p=0$, 
+$$
+\Rightarrow 
+\left|\begin{array}{ccc}
+  x+\frac{p}{k} & y & z \\
+  -m & k & 0 \\
+  -\frac{n}{k} & 0 & 1
+  \end{array}\right|=0
 $$
 
+showing that the point on this surface that passes through point $(-\frac{p}{k},0,0)$
+and is parallel to vectors $(-m,k,0)$ and $(-n,0,k)$. This
+surface is a plane.
+
+\paragraph{Example} In an affine c.s., plane $\pi$ passes 
+$M_1(a,0,0),M_2(0,b,0),M_3(0,0,c)(a,b,c\neq 0)$,
+\subparagraph{Solution}
+$$
+\begin{array}{lll}
+  \left|\begin{array}{ccc}
+  x-a & y & z \\
+  -a & b & 0 \\
+  -a & 0 & c
+  \end{array}\right|=0 \\
+  \end{array}
+$$
+$$
+\Rightarrow \frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1
+$$
+
+Alternatively, assume the euqation of $\pi$ is $Ax+By+Cz+D=0$,
+$$
+A=-\frac{D}{a}, \quad B=-\frac{D}{b}, \quad C=-\frac{D}{c}
+$$
+$$
+ \Rightarrow \frac{Dx}{a}+\frac{Dy}{b}+\frac{Dz}{c}=D
+$$
+If $D=0$, $\pi$ passes through the origin.
+Thus $D\neq 0$
+$$
+ \Rightarrow \frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1
+$$
+
+\paragraph{Theorem} In an afifne coordinate system, vector $(a,b,c)$
+is parallel to plane \\$\pi : Ax+By+Cz+D=0$ if and only if
+$$
+Aa+Bb+Cc=0
+$$
+\paragraph{Proof} 
+Pick a point $M_{0}\left(x_{0}, y_{0}, z_{0}\right)$ on
+the plane $\pi$, 
+$$
+A x_{0}+B y_{0}+C z_{0}+D=0
+$$
+Pick 
+$M\left(x_{0}+k, y_{0}+m, z_{0}+n\right)$ 
+and a vector $\vec r=\overrightarrow{M_{0} M},$ 
+then $r\parallel \pi \iff M \in \pi,$ which is 
+$$
+A\left(x_{0}+k\right)+B\left(y_{0}+m\right)+C\left(z_{0}+n\right)+D=0
+$$
+Thus $A a+B b+C c=0 .$
+
+\paragraph{Consequently}
+\begin{itemize}
+  \item $\pi \parallel x \quad axis \iff A=0$
+  \item $\pi \parallel y \quad axis \iff B=0$
+  \item $\pi \parallel z \quad axis \iff C=0$
+  \item $\pi \parallel xy \quad plane \iff A=0,B=0$
+\end{itemize}
+
+\paragraph{Theorem} In an affine c.s., plane 
+$$
+\begin{array}{l}
+  \pi_{1}: A_{1} x+B_{1} y+C_{1} z+D_{1}=0 \\
+  \pi_{2}: A_{2} x+B_{2} y+C_{2} z+D_{2}=0
+  \end{array}
+$$
+\begin{itemize}
+  \item 
+    $\pi_{1} \parallel \pi_{2} \Longleftrightarrow A_{1}: A_{2}=B_{1}: B_{2}=C_{1}: C_{2} ;$
+  \item $\pi_{1}=\pi_{2} \Longleftrightarrow A_{1}: A_{2}=B_{1}: B_{2}=C_{1}: C_{2}=D_{1}: D_{2}$
+  \item $\pi_{1} $intersect $\pi_{2}  \iff (A_1,B_1,C_1)$ is not propotional to $A_2,B_2,C_2$.
+\end{itemize}
+
+\paragraph{Proof}
+Set 
+$$
+\vec u_1 = (-B_1,A_1,0)
+$$
+$$
+\vec v_1 = (-C_1,0,A_1)
+$$
+which are all parallel to $\pi_1$,
+
+Without loss of genrealarity,  assume $A_1\neq 0\quad (A_2\neq 0)$
+
+If $(A_1,B_1,C_1)=k(A_2,B_2,C_2)$, Then 
+$$
+(-B_1)A_2+A_1B_2+0\cdot C_2=0 \Rightarrow \vec u_1 \parallel \pi_2
+$$
+$$
+(-C_1)A_2+0\cdot B_2+ A_1C_2=0 \Rightarrow \vec v_1 \parallel \pi_2
+$$
+$$
+\vec u_1 \not \parallel \vec v_1 \Rightarrow \pi_1 \parallel \pi_2
+$$
+\subsubsection{Relation of three Planes}
+\paragraph{Theorem} In an affine c.s.
+let
+$$
+\begin{array}{l}
+\pi_{1}: A_{1} x+B_{1} y+C_{1} z+D_{1}=0 \\
+\pi_{2}: A_{2} x+B_{2} y+C_{2} z+D_{2}=0 \\
+\pi_{3}: A_{3} x+B_{3} y+C_{3} z+D_{3}=0
+\end{array}
+$$
+$\pi_{1}, \pi_{2}, \pi_{3}$ are concurrent at one point if and only if 
+$$
+\left|\begin{array}{lll}
+A_{1} & B_{1} & C_{1} \\
+A_{2} & B_{2} & C_{2} \\
+A_{2} & B_{3} & C_{3}
+\end{array}\right| \neq 0
+$$
+\paragraph{Proof} $\pi_{1}, \pi_{2}, \pi_{3}$ concurrent at one point 
+if and only if
+$$
+\left\{\begin{array}{l}
+A_{1} x+B_{1} y+C_{1} z+D_{1}=0 \\
+A_{2} x+B_{2} y+C_{2} z+D_{2}=0 \\
+A_{3} x+B_{3} y+C_{3} z+D_{3}=0
+\end{array} \right.
+$$
 
 \end{document}
