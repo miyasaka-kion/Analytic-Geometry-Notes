@@ -1,5 +1,6 @@
-# My Analytic Geometry Note
+# My Analytic Geometry Notes
 
-This is a note written by `miyasaka-kion`. 
+ `miyasaka-kion`的解析几何笔记
 
-Provide for those in need.
+给有需要的人参考～
+
