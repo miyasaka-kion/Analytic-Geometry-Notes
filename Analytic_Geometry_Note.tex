@@ -1,20 +1,12 @@
-\documentclass[UTF8]{ctexart}
-\usepackage{bm}
-\usepackage{mathtools}
-\usepackage{lmodern}
-\usepackage{xeCJK}
-\usepackage{amsmath}
-\usepackage{geometry}
-\CTEXoptions[today=old]
-\geometry{a4paper,scale=0.7}
-
-
-\title{Geometry Algebra Pen Notes}
+\documentclass[11pt]{book}
+\title{Geometric Algebra Pen Note}
 \author{Kion Conio}
 \date{\today}
 
-\begin{document}
+
+\begin{document}	
 \maketitle
+\chapter{Vector algebra}
 \section{The Algebra of vectors}
 
 \subsection{Vectors and its Algebraic Operations }
@@ -33,11 +25,11 @@ Directed line segment: $\rightarrow $. We could draw a graph to make our proof.
 
 \item $\overrightarrow{AB}$. An arrow upper the letters. 
 
-\item $\bm \alpha$: bold and lower case Roman letter.  
+\item $\vec \alpha$: bold and lower case Roman letter.  
 
 \item Sometimes, $\vec a,\underline u$ 
 
-\item Magnitude, size, length: $|\bm \alpha|,|\overrightarrow {AB}|$
+\item Magnitude, size, length: $|\vec \alpha|,|\overrightarrow {AB}|$
 
 
 \end{itemize}
@@ -46,7 +38,7 @@ Directed line segment: $\rightarrow $. We could draw a graph to make our proof.
 
 Two vectors are equal if and only if their magnitude and direction are the same. No matter where they start.
 
-The vector with zero magnitude is called the \textbf{zero vector}, denoted by $\bm 0$. $\bm 0$ is the only vector is the only vector with specific direction.We have: 
+The vector with zero magnitude is called the \textbf{zero vector}, denoted by $\vec 0$. $\vec 0$ is the only vector is the only vector with specific direction.We have: 
 $$
 \overrightarrow {AB}=\vec 0 \iff A=B
 $$
@@ -260,6 +252,8 @@ Consider $\vec b \neq \vec 0 $, then
 $$
 \vec{b}=|\vec{b}| \frac{\vec{b}}{|\vec{b}|}=\left\{\begin{array}{ll}
 \frac{\vec{b}}{|\vec{a}|}, & \vec{a} \text { and } \vec{b} \text { have the same direction } \\
+$$
+$$
 \frac{-|\vec{b}|}{|\vec{a}|}, & \vec{a} \text { and } \vec{b} \text { have the opposite direction }
 \end{array}\right.
 $$
@@ -793,5 +787,99 @@ A_{2} x+B_{2} y+C_{2} z+D_{2}=0 \\
 A_{3} x+B_{3} y+C_{3} z+D_{3}=0
 \end{array} \right.
 $$
+
+\section{Straight lines in an Affine Coordinate System}
+\subsection{Equation of lines}
+Assume that line $l$ passes through point $M_0(x_0,y_0,z_0)$ and parallel to the vector $\vec u = (a,b,c)$. Point $M(X,Y,Z)$is on line $l$,
+$$
+\iff \overrightarrow{MM_0} \parallel \vec u 
+$$
+$$
+\iff \overrightarrow{MM_0} = \lambda \vec u 
+$$
+
+So we got the Parametric equation of the line (A point and a direction)
+$$
+\left\{\begin{array}{l}
+x=x_{0}+\lambda X \\
+y=y_{0}+\lambda Y \\
+z=z_{0}+\lambda Z
+\end{array}\right.
+$$
+
+if $a,b,c \neq 0$
+
+$$
+\frac{x-x_{0}}{X}=\frac{y-y_{0}}{Y}=\frac{z-z_{0}}{Z}
+$$
+
+Aline can also be determined by two non-parallel planes.
+...
+q
+
+$$
+\left\{\begin{array}{l}
+A\ Plane\\
+Another\ Plane 
+\end{array}\right.
+$$
+\subsection{Relationship between a Plane and a Line}
+$$
+l :\frac{x-x_{0}}{X}=\frac{y-y_{0}}{Y}=\frac{z-z_{0}}{Z}
+$$
+$$
+\pi : Ax+By+Cz+D=0
+$$
+...
+
+
+\section{Relationship between two lines}
+$$
+\begin{aligned}
+&l_{1} \parallel l_{2} \Longleftrightarrow u_{1} \parallel u_{2}
+$$
+$$
+&l_{1}, l_{2} \quad \text { coplanar } \Longleftrightarrow\left(\overrightarrow{M_{1} M_{2}}, u_{1}, u_{2}\right)=0,
+$$
+$$
+&l_{1}, l_{2} { are\ the\ same\ line } \Longleftrightarrow \overrightarrow{M_{1} M_{2}}, u_{1}, u_{2} {are \ collinear. }
+$$
+\end{aligned}
+kk//
+\subsection{Sheef of Planes}
+Assume that line $l$ is given by 
+$$
+\left\{\begin{array}{l}
+A_{1} x+B_{1} y+C_{1} z+D_{1}=0 \\
+A_{2} x+B_{2} y+C_{2} z+D_{2}=0
+\end{array}\right.
+$$
+ Since $\pi_1 \neq \pi_2$, we know $(A_1,B_1,C_1)$ is not proportional to $(A_2,B_2,C_2)$. Thus, for any $\lambda, \mu$, there are not both $0$s
+ 
+ $$
+ \lambda A_{1}+\mu A_{2}, \quad \lambda B_{1}+\mu B_{2}, \quad \lambda C_{1}+\mu C_{2}
+ $$
+ Hence, the equation 
+ $$
+ \lambda\left(A_{1} x+B_{1} y+C_{1} z+D_{1}\right)+\mu\left(A_{2} x+B_{2} y+C_{2} z+D_{2}\right)=0
+ $$ ...
+ which is a plane.
+ 
+\paragraph{Definiton} \{$S=\textit{planes in the form of }  \lambda\left(A_{1} x+B_{1} y+C_{1} z+D_{1}\right)+\mu\left(A_{2} x+B_{2} y+C_{2} z+D_{2}\right)=0, \lambda, \mu \textit{are not both 0s.}\}$
+ 
+ \paragraph{Definition}$T = \{\textit{ planes that passes through }l\}$. We will prove $S=T$
+ \paragraph{Proof}
+ 1. Claim $S$ ...
+ 
+ \subsection{An Example}..
+ 
+ \section{Planes and Lines in the Cartesian Coordinate system}
+ 
+
+
+
+
+
+
 
 \end{document}
